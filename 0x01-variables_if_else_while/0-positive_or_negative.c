@@ -1,8 +1,10 @@
-#include <stdlin.h>
+#include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 /**
- * betty style function doc for function main goes there
- *  program will assign a random number to a var n
+ * main - print if the number is positive, zero or negative
+ *  using main function
+ *  Return: 0
  */
 int main(void)
 {
@@ -12,13 +14,15 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 	{
-		printf("n is postive");
+		printf("%i is postive\n", n);
 	}
-	if (n == 0)
+	else if (n == 0)
 	{
-		printf("n is zero");
+		printf("%i is zero\n", n);
 	}
-	if (n < 0)
+	else
 	{
-		printf("n is negative")
+		printf("%i is negative\n", n);
 	}
+	return (0);
+}
