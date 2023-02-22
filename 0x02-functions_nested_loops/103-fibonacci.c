@@ -59,7 +59,7 @@ int main(void)
 		num2 = numx;
 	}
 
-	puts("%lu\n", sum);
+	printf("%lu\n", sum);
 
 	return (0);
 }
