@@ -1,22 +1,27 @@
 #include "main.h"
 
 /**
- * add - adds two integers
- * @a: number to be added
- * @b: number to be added
- *
- * Description: A simple function to determine
- * the sum of two integers. Receives numbers,
- * adds them together, and returns result.
- * Return: result of addition
+ * times_table - a function that prints the 9 times table.
+ * starting with 0
  */
-int add(int a, int b)
+void times_table(void)
 {
-	int a;
-	int b;
-	int result;
+	int num, mult, prod;
 
-	result = (a + b);
-
-	return (result);
+	for (num = 0; num <= 9; num++)
+	{
+		_putchar('0');
+		for (mult = 1; mult <= 9; mult++)
+		{
+			_putchar(',');
+			_putchar(' ');
+			prod = num * mult;
+			if (prod <= 9)
+				_putchar(' ');
+			else
+				_putchar((prod / 10) + '0');
+			_putchar((prod % 10) + '0');
+		}
+		_putchar('\n');
+	}
 }
